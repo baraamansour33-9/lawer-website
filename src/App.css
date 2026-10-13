@@ -1,0 +1,219 @@
+/* Stel het lettertype en de standaardkleuren van de website in. */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f3ef;
+  color: #222222;
+}
+/* Zorg ervoor dat de website de volledige breedte gebruikt. */
+.website {
+  width: 100%;
+}
+/* Maak de navigatiebalk donkerblauw en zet de onderdelen naast elkaar. */
+.navbar {
+  background-color: #142b46;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Verwijder de standaardmarge rond de naam van het kantoor. */
+.logo {
+  margin: 0;
+  font-size: 30px;
+  color:#d6b878;
+}
+.logo-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap:6px;
+}
+.logo-img{
+  height: 45px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* Zet de navigatielinks naast elkaar. */
+.navbar nav {
+  display: flex;
+  gap: 25px;
+}
+/* Geef de navigatielinks een witte kleur zonder onderstreping. */
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+}
+/* Verander de linkkleur wanneer de muis over een link gaat. */
+.navbar nav a:hover {
+  color: #d6b878;
+}
+/* Geef de taalkeuzeknop een gouden kleur. */
+.language-button {
+  background-color: #d6b878;
+  color: #142b46;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* Geef de introductie een nette en ruime opmaak. */
+.hero {
+  text-align:center;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+/* Maak de kleine tekst boven de hoofdtitel goudkleurig. */
+.eyebrow {
+  color: #a98543;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+/* Maak de hoofdtitel duidelijk en groot. */
+.hero h1 {
+  color: #142b46;
+  font-size: 30px;
+  max-width: 500px;
+  margin: 30px auto;
+}
+/* Geef de beschrijving een rustige uitstraling. */
+.description {
+  color: #555555;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 20px auto 30px;
+  line-height: 1.7;
+}
+/* Geef belangrijke knoppen een donkerblauwe achtergrond. */
+.main-button {
+  display: inline-block;
+  background-color: #142b46;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* Verander de knopkleur wanneer de muis erop staat. */
+.main-button:hover {
+  background-color: #24486f;
+}
+/* Geef de sectie met diensten ruimte rondom de inhoud. */
+.services {
+  padding: 60px 40px;
+  text-align: center;
+}
+/* Maak de titel van de diensten donkerblauw. */
+.services h2 {
+  color: #142b46;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+/* Zet de dienstkaarten netjes naast elkaar. */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 850px;
+  margin: 0 auto 30px;
+}
+/* Geef iedere dienst een eigen kaart. */
+.service-card {
+  background-color: white;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 20px 20px;
+  cursor: pointer;
+  color: #142b46;
+  font-size: 16px;
+}
+/* Verander de kaartkleur wanneer de muis erop staat. */
+.service-card:hover {
+  border-color: #d6b878;
+}
+/* Markeer de gekozen dienst met een gouden rand. */
+.service-card.selected {
+  border-color: #b89552;
+  background-color: #fffaf0;
+}
+/* Maak het juridische symbool duidelijk zichtbaar. */
+.service-card span {
+  font-size: 30x;
+  color: #b89552;
+}
+/* Verwijder de standaardmarge rond de titel op de kaart. */
+.service-card h3 {
+  margin-bottom: 0;
+}
+/* Maak het contactgedeelte rustig en duidelijk. */
+.contact {
+  background-color: #ffffff;
+  padding: 45px 20px;
+  text-align: center;
+}
+/* Geef de voettekst een donkere achtergrond. */
+footer {
+  background-color: #142b46;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+/* Pas de website aan voor kleinere schermen. */
+@media (max-width: 500px) {
+  .navbar {
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .navbar nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .services {
+    padding: 40px 20px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Zet de consultatieknoppen naast elkaar. */
+.consultation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Geef de terugknop een rustige vormgeving. */
+.back-button {
+  background-color: white;
+  color: #142b46;
+  border: 1px solid #142b46;
+  border-radius: 5px;
+  padding: 14px 24px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Maak een uitgeschakelde knop herkenbaar. */
+.main-button:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+}
+
+/* Geef de consultatiekeuzes voldoende ruimte. */
+.services > .service-card {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 15px auto;
+} 
+
+  
