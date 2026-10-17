@@ -1,27 +1,25 @@
-// Importeer React om de consultatiepagina te maken.
 import { useState } from 'react'
-// Maak de pagina voor het kiezen van een consultatie.
-function Consultation({ language, onBack, onNext }) {
+import StepProgress from './SetpProgress'
+
+function Consultation({ language, setLanguage, onBack, onNext }) {
   // Bewaar de gekozen manier van consulteren.
   const [consultationType, setConsultationType] = useState('')
   // Toon de inhoud van de consultatiepagina.
   return (
     <div className="website">
-      {/* Toon de naam van het advocatenkantoor. */}
-      <header className="navbar">
-        <h2 className="logo">LEX & LAW</h2>
-      </header>
+       <StepProgress
+        language={language}
+        currentStep={2}
+        />
+     
       {/* Toon de keuzes voor de consultatie. */}
       <main className="services">
         {/* Toon de titel in de gekozen taal. */}
-        <h1>
-          {language === 'nl'
-            ? 'Kies uw consultatie'
-            : 'Choose your consultation'}
-        </h1>
-        {/* Leg uit dat de bezoeker een consultatie moet kiezen. */}
+        
+        
         <p>
           {language === 'nl'
+                
             ? 'Hoe wilt u juridisch advies ontvangen?'
             : 'How would you like to receive legal advice?'}
         </p>
@@ -64,7 +62,7 @@ function Consultation({ language, onBack, onNext }) {
             className="back-button"
             onClick={onBack}
           >
-            {language === 'nl' ? 'Terug' : 'Back'}
+            {language === 'nl' ? 'Vorige' : 'Back'}
           </button>
           {/* Ga verder als een consultatie is gekozen. */}
           <button
