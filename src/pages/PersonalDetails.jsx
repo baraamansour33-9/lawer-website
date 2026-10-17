@@ -91,7 +91,7 @@ function PersonalDetails({
   return (
     <main className="booking-page">
         <StepProgress
-      language={langugage}
+      language={language}
       currentStep={4}
       />
       <div className="booking-card">
